@@ -1,0 +1,81 @@
+/* Auth Pages Styles */
+.auth-container {
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(156, 39, 176, 0.1) 100%);
+  min-height: 100vh;
+}
+
+.auth-card {
+  transition: all 0.3s ease-in-out;
+}
+
+.auth-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.social-button {
+  transition: all 0.2s ease-in-out;
+}
+
+.social-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.brand-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-section::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: drift 20s infinite linear;
+}
+
+@keyframes drift {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .auth-container {
+    padding: 16px 8px;
+  }
+  
+  .auth-card {
+    margin: 0 8px;
+  }
+  
+  .brand-section {
+    padding: 24px 16px;
+  }
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loading-pulse {
+  animation: pulse 2s infinite;
+}
